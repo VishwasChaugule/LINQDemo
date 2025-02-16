@@ -1,8 +1,12 @@
 ﻿<Properties StartupConfiguration="{B8EF563C-7E27-48B7-BB51-ADC08137F442}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.LINQDemo PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="LINQDemo/Program.cs">
     <Files>
-      <File FileName="LINQDemo/Program.cs" Line="14" Column="1" />
+      <File FileName="LINQDemo/Program.cs" Line="90" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,15 +18,11 @@
       </Pad>
       <Pad Id="ClassPad">
         <State name="__root__">
-          <Node name="LINQDemo" expanded="True" />
+          <Node name="LINQDemo" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.LINQDemo PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

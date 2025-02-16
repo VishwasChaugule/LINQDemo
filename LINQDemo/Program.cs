@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Linq;
+using LINQDemo;
 
 Console.WriteLine("Hello, World!");
 
@@ -48,6 +49,14 @@ Console.WriteLine(numbers.ElementAt(3));
 
 List<string> List1 = new List<string> { "apple", "banana", "cherry" };
 List<string> List2 = new List<string> { "apple", "banana", "cherry" };
+
+var groupedByLength = List1.GroupBy(c => c.Length);
+
+foreach (var group in groupedByLength)
+{
+    Console.WriteLine($"Key: {group.Key}");
+    Console.WriteLine(string.Join(",", group));
+}
 
 // Compare if the lists are the same
 bool areEqual = List1.SequenceEqual(List2);
@@ -105,6 +114,26 @@ var unionList = numbers.Union(numList2).ToList();
 Console.WriteLine(string.Join(", ", unionList));
 
 Console.WriteLine(numList2.Sum());
+
+//Merges two sequences by matching corresponding elements.
+var combined = numbers.Zip(numList2, (a, b) => new { a, b });
+Console.WriteLine(string.Join(",", combined));
+
+var people = new List<Person>()
+                    { new Person { Name = "John", CityId = 1 },
+                        new Person { Name = "Jeevan", CityId = 2 },
+};
+
+var cities = new List<City> { new City { Id = 1, CityName = "Pune" }, new City { Id = 2, CityName = "Mumbai" } };
+var result = from person in people
+             join city in cities on person.CityId equals city.Id
+             select new { person.Name, city.CityName };
+
+foreach (var item in result)
+{
+    Console.WriteLine($"Name: {item.Name}, City Name: {item.CityName}");
+}
+
 Console.WriteLine(numbers.Single());
 Console.WriteLine(numbers.SingleOrDefault());
 
